@@ -90,7 +90,7 @@ endfunction
 augroup MyColors
     autocmd!
     autocmd ColorScheme dracula call DraculaPMenu()
-    "autocmd ColorScheme * call TransparentBackground() " uncomment if you are using a translucent terminal and you want nvim to use that
+    autocmd ColorScheme * call TransparentBackground() " comment if you don't want nvim to use that or your terminal has no translucent background.
 augroup END
 
 " Main Coloring Configurations
