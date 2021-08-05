@@ -28,7 +28,7 @@ Transparent/translucent terminal background support (uncomment `autocmd ColorSch
 
 `./install.sh`
 
-Automatically installs my configuration, along with dependencies into your system. Tested on Ubuntu 20.04. I highly suggest reading and understanding each line of the installation script before running it, especially if you are using other Linux distros, or macOS. For macOS, manually run the commands, and use `homebrew` instead of `apt`.
+Automatically installs Optixal's configuration, along with dependencies into your system. Optixal tested it on Ubuntu 20.04, my fork has the goal to use it on arch based OSs. I highly suggest reading and understanding each line of the installation script before running it.
 
 #### Post Installation
 
@@ -59,6 +59,10 @@ It may be easier for you to type `vim` instead of `nvim` everytime you edit a fi
 ```sh
 echo "alias vim='nvim'" >> ~/.bashrc
 ```
+or
+```sh
+echo "alias vim='nvim'" >> ~/.zshrc
+```
 
 ##### Fix nvim + tmux issues
 
@@ -68,17 +72,6 @@ Running nvim within a tmux session may cause certain unwanted issues like escape
 set -sg escape-time 5 # fix vim esc delay
 set -g default-terminal "screen-256color" # ensures vim uses right $TERM color, default is "screen"
 set -ga terminal-overrides ",*256col*:Tc" # fixes vim reproducing slightly wrong colors in tmux
-```
-
-### Update
-
-#### Updates from me
-
-I occasionally update and push my new configurations here. If you want to receive the updates, you can pull the latest init.vim and replace the one you have.
-
-```sh
-git pull
-cp init.vim ~/.config/nvim/
 ```
 
 #### vim-plug commands for plugins
