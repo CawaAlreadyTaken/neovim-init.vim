@@ -72,6 +72,23 @@ set -g default-terminal "screen-256color" # ensures vim uses right $TERM color, 
 set -ga terminal-overrides ",*256col*:Tc" # fixes vim reproducing slightly wrong colors in tmux
 ```
 
+##### Fix Jedi issues
+
+If Jedi column parameter is always out of range (invalidating autocompletion), this is a temporary fix:
+
+In `jedi/api/helpers.validate_line_column()`, change:
+
+```py
+        column = line_len if column is None else column
+```
+
+to this:
+
+```py
+        column = min(line_len, line_len if column is None else column)
+```
+
+
 #### vim-plug commands for plugins
 
 Run these to install new plugins, update or delete existing plugins, or upgrade vim-plug itself.
