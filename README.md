@@ -98,6 +98,13 @@ Run these to install new plugins, update or delete existing plugins, or upgrade 
 * Delete unused plugins: `:PlugClean` in nvim
 * Update vim-plug itself: `:PlugUpgrade` in nvim
 
+### Github copilot
+Added github/copilot to the plugin list. Run 
+```
+:Copilot setup
+```
+in nvim in order to set it up and link it to your github account. Your github account has to be whitelisted, visit https://copilot.github.com/ to learn more.
+
 ### Mapped Commands in Normal Mode
 
 Most custom commands expand off my map leader, keeping nvim as vanilla as possible.
