@@ -51,7 +51,6 @@ Plug 'dkarter/bullets.vim'
 Plug 'psliwka/vim-smoothie'
 Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'wellle/context.vim'
-Plug 'github/copilot.vim'
 
 " Entertainment
 Plug 'dansomething/vim-hackernews'
